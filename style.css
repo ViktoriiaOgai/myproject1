@@ -1,0 +1,256 @@
+@font-face {
+  font-family: 'Barlow';
+  src: url('https://www.fontsquirrel.com/fonts/barlow') format('woff2'),
+       url('https://www.fontsquirrel.com/fonts/barlow') format('woff');
+}
+
+:root {
+  --bg: #EFF6FF;
+  --text: #2A4A5C;
+  --fb: #255A9B;
+  --in: #0076B6;
+  --blue: #3698FB;
+  --gray: #7B8A92;
+  --gray-light: #96A5B1;
+  --gray-lighter: #AFAFAF;
+  --border: #EEEEEE;
+  --white: #FFFFFF;
+  --font: 'Barlow', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font);
+}
+
+body {
+  background: var(--bg);
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  padding-top: 50px;
+}
+
+.container {
+  display: flex;
+  width: 90%;
+  max-width: 1100px;
+  background: var(--white);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+
+.left {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.background {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.logo {
+  position: absolute;
+  top: 32px;
+  left: 32px;
+  width: 100px;
+  height: auto;
+}
+
+.right {
+  flex: 1;
+  padding: 3rem;
+  color: var(--text);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.subtext {
+  color: var(--gray);
+  font-size: 0.9rem;
+}
+
+.icon {
+    width: 25px;
+    height: 25px;
+}
+.social-buttons {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.btn {
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+  padding: 0.3rem 0.3rem;
+  border: none;
+  border-radius: 8px;
+  color: var(--white);
+  font-weight: 500;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.3s;
+  width: 250px;
+  max-width: 255px;
+  height: 50px;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 500px; 
+  height: 50px;
+}
+
+.fb {
+  background: var(--fb);
+  }
+
+.in {
+  background: var(--in);
+  }
+
+.divider {
+  text-align: center;
+  margin: 1rem 0;
+  color: var(--gray-light);
+  position: relative;
+}
+
+.divider::before,
+.divider::after {
+  content: '';
+  height: 1px;
+  width: 40%;
+  background: var(--border);
+  position: absolute;
+  top: 50%;
+}
+
+.divider::before {
+  left: 0;
+}
+
+.divider::after {
+  right: 0;
+}
+
+.form-row {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+input[type="email"],
+input[type="tel"] 
+{
+  flex: 1;
+  padding: 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+input:focus {
+  outline: none;
+  border-color: var(--blue);
+  box-shadow: 0 0 0 2px rgba(54, 152, 251, 0.2);
+}
+
+fieldset {
+  border: none;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.radio-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.radio-group label {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  cursor: pointer;
+  padding: 0.4rem 0.7rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  transition: background 0.3s, color 0.3s;
+}
+
+.radio-group input[type="radio"]:checked + label,
+.radio-group label:hover {
+  background: var(--blue);
+  color: var(--white);
+}
+
+.tooltip {
+  background: var(--white);
+  color: var(--gray-light);
+  padding: 0.5rem;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  margin-top: 3rem;
+  margin-bottom: 1.2rem;
+  width: 300px;
+  height: 70px;
+}
+
+.checkbox {
+  color: var(--gray-light);
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.checkbox a {
+  color: var(--blue);
+  text-decoration: none;
+}
+
+.submit {
+  background: var(--blue);
+  width: 35%;
+  margin-top: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .left, .right {
+    flex: unset;
+    width: 100%;
+  }
+
+  .social-buttons {
+    flex-direction: column;
+  }
+
+  .form-row {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Registration Form</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="left">  
+  <img src="https://raw.githubusercontent.com/Habsida-Projects/css-task/main/img/bg.jpg" alt="Background" class="background"/>
+  </div>
+  <div class="logo">
+  <img src="https://raw.githubusercontent.com/Habsida-Projects/css-task/main/img/logo.svg" alt="Logo" class="logo"/>
+  </div>
+</div>
+    <div class="right">
+      <h1>Get intoo it today</h1>
+      <p class="subtext">There is no charge or obligation upon registration.</p>
+
+      <div class="social-buttons">
+        <button class="btn fb"><img src="https://raw.githubusercontent.com/Habsida-Projects/css-task/main/img/facebook.svg" alt="" class="icon"/><span>Register with Facebook</span></button>
+        <button class="btn in"><img src="https://raw.githubusercontent.com/Habsida-Projects/css-task/main/img/linkedin.svg" alt="" class="icon"/><span>Register with LinkedIn</span></button>
+      </div>
+
+      <div class="divider"><span>or</span></div>
+
+      <form>
+        <div class="form-row">
+          <input type="email" placeholder="Email: you@example.com" required /> 
+          <input type="tel" placeholder="Phone" required />
+        </div>
+
+        <fieldset>
+          <legend>What type of investor are you?</legend>
+          <p class="subtext">Select the type of investor you are below.</p>
+          <div class="radio-group" title="Select investor type">
+            <label><input type="radio" name="investor" checked /> Individual</label>
+            <label><input type="radio" name="investor" /> Business</label>
+            <label><input type="radio" name="investor" /> IRA</label>
+            <label><input type="radio" name="investor" /> Trust</label>
+          </div>
+          <div class="tooltip">I am a natural person investing on my own behalf as a sole owner, join teant, or retenant in common</div>
+        </fieldset>
+
+        <label class="checkbox">
+          <input type="checkbox" required />
+          I agree to the terms and receiving notifications from intoo <a href="#">View full terms</a>
+        </label>
+
+        <button type="submit" class="btn submit">Create Account</button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
