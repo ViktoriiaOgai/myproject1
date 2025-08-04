@@ -1,1 +1,1 @@
-http://127.0.0.1:5500/myfirst.html
+[Открыть myfirst.html на GitHub](https://github.com/ViktoriiaOgai/myfirst-web-core-5.7/blob/main/myfirst.html)
