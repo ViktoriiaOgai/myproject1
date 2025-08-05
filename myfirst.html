@@ -26,22 +26,34 @@
 
       <div class="divider"><span>or</span></div>
 
-      <form>
-        <div class="form-row">
-          <input type="email" placeholder="Email: you@example.com" required /> 
-          <input type="tel" placeholder="Phone" required />
-        </div>
-
-        <fieldset>
+      <fieldset>
           <legend>What type of investor are you?</legend>
           <p class="subtext">Select the type of investor you are below.</p>
-          <div class="radio-group" title="I am a natural person investing on my own behalf as a sole owner, join teant, or retenant in common">
-            
-            <label><input type="radio" name="investor" checked /> Individual <img src="img/i.png" alt="" class="icon1"/></label>
-            <label><input type="radio" name="investor" /> Business<img src="img/i.png" alt="" class="icon1"/></label>
-            <label><input type="radio" name="investor" /> IRA<img src="img/i.png" alt="" class="icon1"/></label>
-            <label><input type="radio" name="investor" /> Trust<img src="img/i.png" alt="" class="icon1"/></label>
-          </div>
+                    
+            <label><input type="radio" name="investor" checked />Individual<span class="tooltip-container">
+              <img src="img/i.png" alt="info" class="icon1" />
+              <span class="tooltip-text">I am a natural person investing on my own behalf as a sole owner, joint tenant, or tenant in common.
+              </span>
+              </span>
+            </label>
+            <label><input type="radio" name="investor" checked />Business<span class="tooltip-container">
+              <img src="img/i.png" alt="info" class="icon1" />
+              <span class="tooltip-text">I am a natural person investing on my own behalf as a sole owner, joint tenant, or tenant in common.
+              </span>
+              </span>
+            </label>
+            <label><input type="radio" name="investor" checked />IRA<span class="tooltip-container">
+              <img src="img/i.png" alt="info" class="icon1" />
+              <span class="tooltip-text">I am a natural person investing on my own behalf as a sole owner, joint tenant, or tenant in common.
+              </span>
+              </span>
+            </label>
+            <label><input type="radio" name="investor" checked />Trast<span class="tooltip-container">
+              <img src="img/i.png" alt="info" class="icon1" />
+              <span class="tooltip-text">I am a natural person investing on my own behalf as a sole owner, joint tenant, or tenant in common.
+              </span>
+              </span>
+            </label>
           </fieldset>
         <label class="checkbox">
           <input type="checkbox" required />
