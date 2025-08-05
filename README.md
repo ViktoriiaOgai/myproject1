@@ -1,1 +1,1 @@
-[Открыть myfirst.html на GitHub](https://github.com/ViktoriiaOgai/myfirst-web-core-5.7/blob/main/myfirst.html)
+https://github.com/ViktoriiaOgai/myfirst-web-core-5.7/blob/main/myfirst.html
