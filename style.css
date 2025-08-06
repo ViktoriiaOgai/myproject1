@@ -73,17 +73,18 @@ body {
 .subtext {
   color: var(--gray);
   font-size: 0.9rem;
-  margin-top: 4px;
+  margin-top: 70px;
 }
 .icon1 {
-    width: 15px;
-    height: 15px;
+  width: 16px;
+  height: 16px;
 }
 .icon {
     width: 25px;
     height: 25px;
 }
 .social-buttons {
+  margin-top: 50px;
   display: flex;
   align-items:flex-start;
   gap: 1rem;
@@ -179,29 +180,70 @@ fieldset {
 
 .radio-group {
   display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  margin-top: 5rem;
-  margin-bottom: 0.5rem;
+  justify-content:space-between;
+  gap: 0.5rem;
+  margin-top: 2rem;
 }
 
 .radio-group label {
+
+  height: 25px;
+  box-sizing: border-box;
   display: flex;
-  align-items: center;
-  gap: 0.3rem;
-  cursor: pointer;
-  padding: 0.4rem 0.7rem;
+  align-items:flex-end;
+  padding: 0.2rem 0.4rem;
+
   border: 1px solid var(--border);
-  border-radius: 8px;
-  transition: background 0.3s, color 0.3s;
+  border-radius: 5px;
+  background: var(--white);
+  cursor: pointer;
+  transition: border 0.3s ease;
+  position: relative;
 }
 
-.radio-group input[type="radio"]:checked + label,
+.radio-group input[type="radio"] {
+  accent-color: var(--blue);
+}
 .radio-group label:hover {
   border-color: var(--blue);
-  color: var(--gray);
 }
-
+.radio-group .tooltip-container {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  margin-left: 4px;
+}
+.radio-group .tooltip-text {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  top: 125%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--white);
+  color: var(--gray-light);
+  padding: 8px 12px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(227, 97, 123, 0.3);
+  font-size: 13px;
+  width: 250px;
+  z-index: 10;
+  transition: opacity 0.3s ease;
+}
+.radio-group .tooltip-text::after {
+  content: "";
+  position: absolute;
+  top: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 6px;
+  border-style: solid;
+  border-color: transparent transparent var(--white) transparent;
+}
+.radio-group .tooltip-container:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
 .tooltip {
   background: var(--white);
   color: var(--gray-light);
@@ -216,14 +258,14 @@ fieldset {
 .tooltip-wrapper {
   position: relative;
   display: inline-block;
-  margin-left: 4px;
+  margin-left: 2px;
   cursor: pointer;
 }
 .tooltip-text {
   visibility: hidden;
   opacity: 0;
   position: absolute;
-  top: 110%; /* всплывает вниз от иконки */
+  top: 110%; 
   left: 50%;
   transform: translateX(-50%);
   background: var(--white);           /* белый фон */
